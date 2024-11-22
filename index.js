@@ -42,7 +42,7 @@ app.delete("/canciones/:id", (req, res) => {
     fs.writeFileSync("repertorio.json", JSON.stringify(canciones));
     res.send("¡Canción eliminada con éxito!");
 });
-
+// Devuelve una página web como respuesta a una consulta GET
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
